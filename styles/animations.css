@@ -9,3 +9,108 @@
 ✦ button__text — для обозначения текстового элемента внутри кнопки
 
 */
+
+@keyframes heartPulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.25);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes sparksFlesh {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.button:not(.card__icon-button)::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: var(--main-color, #fff);
+  transition: transform 0.5s ease-in-out;
+  transform-origin: left;
+  mix-blend-mode: difference;
+  transform: scaleX(0);
+}
+
+.button:not(.card__icon-button):hover::before {
+  transform: scaleX(1);
+}
+
+.core,
+.main-body {
+  transition: fill 0.3s ease;
+}
+
+.sparks {
+  opacity: 0;
+}
+
+.card__icon-button:hover .core {
+  fill: var(--contrast-color, #000000);
+  transition: fill 0.3s ease;
+}
+
+.card__icon-button:hover .main-body {
+  fill: var(--contrast-color, #000000);
+  transition: fill 0.3s ease 0.05s;
+}
+
+.card__icon-button:not(:hover) .core {
+  transition: fill 0.3s ease 0.03s;
+}
+
+.card__icon-button:not(:hover) .main-body {
+  transition: fill 0.3s ease;
+}
+
+.card__icon-button:active .core {
+  fill: var(--accent-color, #f00);
+  transition: fill 0.3s ease;
+}
+
+.card__icon-button:active .main-body {
+  fill: var(--accent-color, #f00);
+  transition: fill 0.3s ease 0.05s;
+}
+
+.like-icon.is-liked .core {
+  fill: var(--accent-color, #f00);
+  transition: fill 0.3s ease;
+}
+
+.like-icon.is-liked .main-body {
+  fill: var(--accent-color, #f00);
+  transition: fill 0.3s ease 0.05s;
+}
+
+.like-icon.is-liked .contour {
+  fill: var(--accent-color, #f00);
+  transition: fill 0.3s ease 0.06s;
+}
+
+.like-icon.is-liked .heart {
+  transform-origin: center;
+  animation: heartPulse 0.3s ease-in 0.1s;
+}
+
+.like-icon.is-liked .sparks {
+  animation: sparksFlesh 0.3s ease-in 0.3s;
+}
+
+.like-icon:not(.is-liked) .contour {
+  fill: var(--contrast-color, #000000);
+  transition: fill 0.1s linear;
+}
