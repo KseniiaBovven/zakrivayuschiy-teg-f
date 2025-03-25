@@ -113,7 +113,6 @@
 .card__description {
   display: grid;
   gap: 25px;
-  border-block-start: none;
   padding: 25px;
   color: var(--contrast-color, #000000);
   background: var(--main-color, #fff);
@@ -173,11 +172,6 @@
 
 .button:not(.card__icon-button):focus-visible {
   box-shadow: 2px 2px 0 var(--contrast-color, #000000);
-}
-
-.card__icon-button {
-  border: 2px solid transparent;
-  transition: border-color 0.3s ease;
 }
 
 .card__icon-button:focus-visible {
