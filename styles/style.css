@@ -31,7 +31,7 @@
   margin-block: 100px;
   border: 2px solid var(--contrast-color);
   padding-block: clamp(7.5rem, 2.462vw + 6.923rem, 8rem);
-  font-family: var(--font-family-accent, "PressStart2P"), cursive;
+  font-family: var(--font-family-accent, "PressStart2P"), fantasy;
   font-weight: var(--font-weight-normal, 400);
   text-align: center;
   background: var(--main-color, #fff);
@@ -77,7 +77,7 @@
   padding-inline: 10px;
   padding-block: 3px;
   color: var(--contrast-color, #000000);
-  font-family: var(--font-family-text, "Inter");
+  font-family: var(--font-family-text, "Inter"), sans-serif;
   font-size: var(--font-size-text, 18px);
   font-style: normal;
   line-height: 22px;
@@ -92,6 +92,8 @@
 }
 
 .content__image {
+  object-fit: cover;
+  object-position: center;
   inline-size: 100%;
   block-size: 100%;
 }
@@ -102,7 +104,7 @@
   right: clamp(0.813rem, 3.692vw - 0.053rem, 1.563rem);
   opacity: 0.5;
   color: var(--contrast-color, #000000);
-  font-family: var(--font-family-accent, "PressStart2P");
+  font-family: var(--font-family-accent, "PressStart2P"), fantasy;
   font-weight: var(--font-weight-normal, 400);
   font-size: var(--font-size-details, 14px);
   font-style: normal;
@@ -131,7 +133,7 @@
 }
 
 .card__text {
-  font-family: var(--font-family-text, "Inter");
+  font-family: var(--font-family-text, "Inter"), sans-serif;
   font-size: var(--font-size-text, 18px);
   font-style: normal;
   line-height: var(--line-height-text, 117%);
@@ -150,7 +152,7 @@
   border: 2px solid var(--contrast-color, #000000);
   padding: 0;
   overflow: hidden;
-  font-family: var(--font-family-accent, "PressStart2P"), cursive;
+  font-family: var(--font-family-accent, "PressStart2P"), fantasy;
   font-size: var(--font-size-details, 14px);
   line-height: 90%;
   background-color: transparent;
@@ -230,7 +232,7 @@ body:has(.modal[open]) {
 }
 
 .modal__text {
-  font-family: var(--font-family-accent, "PressStart2P"), cursive;
+  font-family: var(--font-family-accent, "PressStart2P"), fantasy;
   font-size: var(--font-size-details, 14px);
   line-height: 150%;
 }
