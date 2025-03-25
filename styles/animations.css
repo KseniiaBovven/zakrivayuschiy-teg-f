@@ -40,9 +40,9 @@
   inset: 0;
   background-color: var(--main-color, #fff);
   transition: transform 0.5s ease-in-out;
+  transform: scaleX(0);
   transform-origin: left;
   mix-blend-mode: difference;
-  transform: scaleX(0);
 }
 
 .button:not(.card__icon-button):hover::before {
